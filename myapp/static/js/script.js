@@ -1,3 +1,1 @@
-<script type="text/javascript">
-  document.write("Get out")
-</script>
+document.write("Get out")
