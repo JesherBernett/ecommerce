@@ -47,8 +47,31 @@
             <br> <br> <br> <br> <br> <br> <br> <br> <br>
             <div class="container-fluid"> 
                 <div class="row"> 
-                    <h1 id="heading"><center>THIS IS THE HOME PAGE</center></h1>
-                     
+                    <h1 id="heading"><center>MY USER PROFILE</center></h1><br><br>
+                    <center>
+                    <table>
+                      <tr>
+                        <td style="color: rgb(18, 15, 228);">Username:- </td>
+                        <td style="color: green;">{{ userdetails.u_name }}</td>
+                      </tr>
+                      <tr>
+                        <td style="color: rgb(18, 15, 228);">Password:- </td>
+                        <td style="color: green;">{{ userdetails.password }}</td>
+                      </tr>
+                      <tr>
+                        <td style="color: rgb(18, 15, 228);">Fullname:- </td>
+                        <td style="color: green;">{{ userdetails.full_name }}</td>
+                      </tr>
+                      <tr >
+                        <td style="color: rgb(18, 15, 228);">Address:- </td>
+                        <td style="color: green;">{{ userdetails.address }}</td>
+                      </tr>
+                      <tr >
+                        <td style="color: rgb(18, 15, 228);">age:- </td>
+                        <td style="color: green;">{{ userdetails.age }}</td>
+                      </tr>
+                    </table>
+                  </center>
                 </div>
             </div>
            

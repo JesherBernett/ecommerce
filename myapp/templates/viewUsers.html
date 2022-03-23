@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>User name</td>
+            <td>Full name</td>
+            <td>Age</td>
+            <td>Address</td>
+            <td> Update/Delete</td>
+        </tr>
+        {% for i in userdata %}
+        <tr>
+           <td>{{i.u_name}}</td>
+           <td>{{i.full_name}}</td>
+           <td>{{i.age}}</td>
+           <td>{{i.address}}</td>
+           <td> <a href="/updateuser/{{i.id}}">Update</a>
+            <a href="/deleteuser/{{i.id}}">Delete</a>
+        </td>
+        </tr>
+           
+        {% endfor %}
+    </table>
+</body>
+</html>
