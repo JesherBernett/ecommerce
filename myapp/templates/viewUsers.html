@@ -7,20 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <h1><center>Admin Home</center></h1>
+    <center>
     <table border="1">
         <tr>
-            <td>User name</td>
-            <td>Full name</td>
-            <td>Age</td>
+            
+            <td>Name</td>
+            <td>Place</td>
+            <td>Email</td>
             <td>Address</td>
             <td> Update/Delete</td>
         </tr>
         {% for i in userdata %}
         <tr>
-           <td>{{i.u_name}}</td>
+           
            <td>{{i.full_name}}</td>
-           <td>{{i.age}}</td>
+           <td>{{i.place}}</td>
+           <td>{{i.email}}</td>
            <td>{{i.address}}</td>
+           
            <td> <a href="/updateuser/{{i.id}}">Update</a>
             <a href="/deleteuser/{{i.id}}">Delete</a>
         </td>
@@ -28,5 +33,6 @@
            
         {% endfor %}
     </table>
+</center>
 </body>
 </html>

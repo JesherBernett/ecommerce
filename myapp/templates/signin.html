@@ -12,18 +12,21 @@
        
         if(pw1!=pw2){
             alert("password did not match");
-            
+            return false;
         }
         else {
             alert("password created succesfully");
+            return true;
         }
         if (password1=="")
               {
                 alert("Enter the password");
+                return false;
               }
         if (password2=="")
               {
                 alert("Confirm the password");
+                return false;
               }
 
     }
@@ -31,7 +34,7 @@
     <body>
         <h1><center>Register New Account</center></h1>
         <center>
-        <form method="post" action="/signin/">
+        <form method="post" action="/signin/" onsubmit="matchPassword()">
            {% csrf_token %}
             
            
