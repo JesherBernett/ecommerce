@@ -7,14 +7,17 @@
     <title>Login Page</title>
 </head>
 <body>
+   <h1><center>Common login page Admin/Employee</center></h1>
+   <center>
     <form action="/loginpage/" method="post">
         {% csrf_token %}
         <div> {{ status }} </div>
-        <label for=""> Username:</label><br>
+        <label for=""> Username:</label>
         <input type="text" name="u_name"> <br>
-        <label for="">Password</label><br>
+        <label for="">Password</label>
         <input type="password" name="password"> <br>
-        <input type="submit" value="login">
+         <input type="submit" value="login">
     </form>
+</center>
 </body>
 </html>

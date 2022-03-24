@@ -1,18 +1,52 @@
 <html>
     <head><title>
-        Sign in
-    </title></head>
+        Register New Account
+    </title>
+
+</head>
+<script>
+   
+    function matchPassword(){
+        var pw1=document.getElementById("password1");
+        var pw2=document.getElementById("password2");
+       
+        if(pw1!=pw2){
+            alert("password did not match");
+            
+        }
+        else {
+            alert("password created succesfully");
+        }
+        if (password1=="")
+              {
+                alert("Enter the password");
+              }
+        if (password2=="")
+              {
+                alert("Confirm the password");
+              }
+
+    }
+</script>
     <body>
+        <h1><center>Register New Account</center></h1>
+        <center>
         <form method="post" action="/signin/">
            {% csrf_token %}
-            Enter your username <input type="text" name="u_name" value="u_name"> <br>
-            Enter your password    <input type="password" name="password" value="password">  <br>
-            Enter your Full name   <input type="text" name="full_name" value="full_name"><br>  
-            Enter your address <textarea name="address" value="address" rows="10" cols="10"> Enter your address here</textarea><br>
-            Enter your age    <input type="number" name="age" value="age"><br><br>
             
-            <input type="submit" name="submit" value="submit"><br>
-            <input type="reset" name="reset" value="reset"> 
+           
+            Name<input type="text" name="full_name" value="full_name"><br>  
+            Place <input type="text" name="place" value="place"><br>
+            Email <input type="email" name="email" value="email"><br>
+            Address <textarea name="address" value="address" rows="10" cols="20"> Enter your address here</textarea><br>
+            Enter your username <input type="text" name="u_name" value="u_name"> <br>
+            Password    <input type="password" name="password" id="password1" value="password">  <br>
+            Confirm Password  <input type="password" name="password2" id="password2" value="password2">  <br>
+            
+            
+            <input type="submit" name="submit" value="submit"  ><br>
+           
         </form>
+    </center>
     </body>
 </html>

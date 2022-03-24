@@ -6,7 +6,7 @@ from .models import User
 # Create your views here.
 
 def index(request):
-    return render(request,'login.html')
+    return render(request,'index.html')
 
 def home(request):
     id=request.session['userid']
@@ -20,11 +20,12 @@ def signup(request):
 def signin(request):
     if request.method =='POST':
         u_name=request.POST['u_name']
+        email=request.POST['email']
         password=request.POST['password']
         full_name=request.POST['full_name']
         address=request.POST['address']
-        age=request.POST['age']
-        userdata=User(u_name=u_name,password=password,full_name=full_name,address=address,age=age)
+        place=request.POST['place']
+        userdata=User(u_name=u_name,password=password,full_name=full_name,address=address,place=place,email=email)
         userdata.save()
 
         return render(request,'signin.html')
